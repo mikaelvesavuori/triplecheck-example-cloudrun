@@ -1,0 +1,25 @@
+{
+  "name": "triplecheck-example-cloudrun",
+  "version": "0.0.1",
+  "description": "TripleCheck broker running on Google Cloud Run with Firestore",
+  "main": "src/index.ts",
+  "author": "Mikael Vesavuori",
+  "license": "MIT",
+  "keywords": [
+    "triplecheck",
+    "contract-testing",
+    "consumer-driven-contracts",
+    "consumer-contracts",
+    "pacts"
+  ],
+  "scripts": {
+    "init": "sh init.sh",
+    "deploy": "sh deploy.sh",
+    "start": "npx ts-node src/index.ts",
+    "docker:build": "docker build --tag triplecheck/triplecheck-broker-cloudrun:v0.0.1 .",
+    "docker:start": "docker run -p 8080:8080 -it triplecheck/triplecheck-broker-cloudrun:v0.0.1"
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1"
+  }
+}
