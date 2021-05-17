@@ -1,5 +1,7 @@
 # triplecheck-example-cloudrun
 
+![TripleCheck example implementation](readme/triplecheck-example.png)
+
 ## TripleCheck broker running on Google Cloud Run with Firestore
 
 This repo demonstrates a working, basic implementation of a [TripleCheck broker](https://github.com/mikaelvesavuori/triplecheck-broker) running on Google Cloud Run with Firestore as the database.
@@ -14,7 +16,7 @@ Technology choices are:
 ## Pre-requisites
 
 - A Google Cloud Platform account
-- Logged in on GCP
+- Logged in to GCP
 - Sufficient credentials to deploy and use Cloud Run and Firestore
 - Enable Firestore (Native mode) in the GCP web console, create a database called `broker-demo` – if you change it you need to make sure that `src/index.ts` points to whatever you called your Firestore
 - Configure `init.sh` and `deploy.sh` so they use your own values
